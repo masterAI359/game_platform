@@ -36,7 +36,7 @@ export default function HomePage() {
       id: 1,
       title: "プロが教える完璧なエイムテクニック",
       author: "FPS_Master_JP",
-      thumbnail: "/placeholder.svg?height=200&width=350",
+      thumbnail: "/images/video.webp",
       views: "125K",
       duration: "12:34",
       game: "VALORANT",
@@ -46,7 +46,7 @@ export default function HomePage() {
       id: 2,
       title: "LoL世界大会優勝チームの戦術分析",
       author: "eSports_Analyst",
-      thumbnail: "/placeholder.svg?height=200&width=350",
+      thumbnail: "/images/video.webp",
       views: "89K",
       duration: "18:45",
       game: "League of Legends",
@@ -56,7 +56,7 @@ export default function HomePage() {
       id: 3,
       title: "Apex Legends ランク1位の立ち回り",
       author: "Apex_Legend_Pro",
-      thumbnail: "/placeholder.svg?height=200&width=350",
+      thumbnail: "/images/video.webp",
       views: "67K",
       duration: "15:22",
       game: "Apex Legends",
@@ -74,7 +74,7 @@ export default function HomePage() {
   }, [heroTexts.length])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <div className="min-h-screen overflow-hidden" style={{ backgroundImage: "url('/images/landing.jpg')" }}>
       <MagneticCursor />
       <ParticleSystem trigger={showParticles} />
       <AnimatedBackground variant="gaming" />

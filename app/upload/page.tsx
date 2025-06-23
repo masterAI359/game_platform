@@ -138,7 +138,7 @@ export default function UploadPage() {
         author: state.user!.username,
         authorId: state.user!.id,
         authorAvatar: state.user!.avatar,
-        thumbnail: "/placeholder.svg?height=200&width=350",
+        thumbnail: "/images/avatar.jpg",
         duration: "1:23",
         views: 0,
         likes: 0,

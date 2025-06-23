@@ -45,9 +45,9 @@ export default function BrowsePage() {
       title: "プロが教える完璧なエイムテクニック - VALORANT",
       description:
         "世界トップクラスのプロゲーマーが実践するエイム練習方法を詳しく解説。初心者から上級者まで役立つテクニック満載。",
-      thumbnail: "/placeholder.svg?height=200&width=350",
+      thumbnail: "/images/video.webp",
       author: "FPS_Master_JP",
-      authorAvatar: "/placeholder.svg?height=40&width=40",
+      authorAvatar: "/images/avatar.jpg",
       verified: true,
       views: 125000,
       likes: 8900,
@@ -65,9 +65,9 @@ export default function BrowsePage() {
       title: "LoL世界大会優勝チームの戦術分析",
       description:
         "2024年世界大会で優勝したチームの戦術を詳細に分析。チームファイトの立ち回りから視界管理まで完全解説。",
-      thumbnail: "/placeholder.svg?height=200&width=350",
+      thumbnail: "/images/video.webp",
       author: "eSports_Analyst",
-      authorAvatar: "/placeholder.svg?height=40&width=40",
+      authorAvatar: "/images/avatar.jpg",
       verified: true,
       views: 89000,
       likes: 6700,
@@ -85,9 +85,9 @@ export default function BrowsePage() {
       title: "Apex Legends ランク1位の立ち回り解説",
       description:
         "現在ランク1位のプレイヤーが実際のゲームプレイを通して立ち回りのコツを解説。ポジショニングの重要性を学ぼう。",
-      thumbnail: "/placeholder.svg?height=200&width=350",
+      thumbnail: "/images/video.webp",
       author: "Apex_Legend_Pro",
-      authorAvatar: "/placeholder.svg?height=40&width=40",
+      authorAvatar: "/images/avatar.jpg",
       verified: true,
       views: 67000,
       likes: 5200,
@@ -104,9 +104,9 @@ export default function BrowsePage() {
       id: "4",
       title: "CS2 完全初心者ガイド - 基本操作から戦術まで",
       description: "CS2を始めたばかりの初心者向けの完全ガイド。基本操作から基礎的な戦術まで分かりやすく解説します。",
-      thumbnail: "/placeholder.svg?height=200&width=350",
+      thumbnail: "/images/video.webp",
       author: "CS_Teacher",
-      authorAvatar: "/placeholder.svg?height=40&width=40",
+      authorAvatar: "/images/avatar.jpg",
       verified: false,
       views: 45000,
       likes: 3400,
@@ -123,9 +123,9 @@ export default function BrowsePage() {
       id: "5",
       title: "Overwatch 2 新メタ解説 - シーズン8",
       description: "シーズン8で登場した新しいメタゲームを詳しく解説。各ヒーローの役割と効果的な組み合わせを紹介。",
-      thumbnail: "/placeholder.svg?height=200&width=350",
+      thumbnail: "/images/video.webp",
       author: "OW2_Meta_Master",
-      authorAvatar: "/placeholder.svg?height=40&width=40",
+      authorAvatar: "/images/avatar.jpg",
       verified: true,
       views: 78000,
       likes: 5800,
@@ -142,9 +142,9 @@ export default function BrowsePage() {
       id: "6",
       title: "Fortnite 建築テクニック上達法",
       description: "プロレベルの建築テクニックを身につけるための練習方法と実戦での活用法を詳しく解説。",
-      thumbnail: "/placeholder.svg?height=200&width=350",
+      thumbnail: "/images/video.webp",
       author: "Build_Master",
-      authorAvatar: "/placeholder.svg?height=40&width=40",
+      authorAvatar: "/images/avatar.jpg",
       verified: false,
       views: 92000,
       likes: 7100,
@@ -163,7 +163,7 @@ export default function BrowsePage() {
     {
       id: "1",
       name: "FPS_Master_JP",
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "/images/avatar.jpg",
       verified: true,
       followers: "125K",
       speciality: "FPS全般",
@@ -173,7 +173,7 @@ export default function BrowsePage() {
     {
       id: "2",
       name: "eSports_Analyst",
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "/images/avatar.jpg",
       verified: true,
       followers: "98K",
       speciality: "戦術分析",
@@ -183,7 +183,7 @@ export default function BrowsePage() {
     {
       id: "3",
       name: "Apex_Legend_Pro",
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "/images/avatar.jpg",
       verified: true,
       followers: "87K",
       speciality: "Apex Legends",
@@ -244,7 +244,7 @@ export default function BrowsePage() {
   const { t } = useI18n()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-cover bg-center backdrop-blur-md" style={{ backgroundImage: "url('/images/browse.jpg')" }}>
       <AnimatedBackground variant="particles" />
       <FloatingElements />
 
@@ -460,7 +460,7 @@ export default function BrowsePage() {
                             <Link href={`/video/${video.id}`}>
                               <div className="relative">
                                 <Image
-                                  src={video.thumbnail || "/placeholder.svg"}
+                                  src={video.thumbnail || "/images/video.webp"}
                                   alt={video.title}
                                   width={350}
                                   height={200}
@@ -495,7 +495,7 @@ export default function BrowsePage() {
 
                               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-3">
                                 <Avatar className="w-8 h-8">
-                                  <AvatarImage src={video.authorAvatar || "/placeholder.svg"} />
+                                  <AvatarImage src={video.authorAvatar || "/images/avatar.jpg"} />
                                   <AvatarFallback>{video.author[0]}</AvatarFallback>
                                 </Avatar>
                                 <div className="flex-1">
@@ -565,7 +565,7 @@ export default function BrowsePage() {
                         className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors cursor-pointer"
                       >
                         <Avatar className="w-12 h-12">
-                          <AvatarImage src={creator.avatar || "/placeholder.svg"} />
+                          <AvatarImage src={creator.avatar || "/images/avatar.jpg"} />
                           <AvatarFallback>{creator.name[0]}</AvatarFallback>
                         </Avatar>
                         <div className="flex-1 min-w-0">
